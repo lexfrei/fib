@@ -8,6 +8,10 @@ func Fib(c int) (n int, err error) {
 		return 0, fmt.Errorf("can't find fib for negative number. Use negfib")
 	}
 
+	if c == 0 {
+		return 0, nil
+	}
+
 	var nm1, nm2 int
 
 	nm1 = 1

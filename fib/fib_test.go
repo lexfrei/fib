@@ -13,6 +13,7 @@ func TestFib(t *testing.T) {
 	if n != 14930352 {
 		panic(fmt.Errorf("N is %d", n))
 	}
+
 	n, err = Fib(2)
 	if err != nil {
 		panic(err)
@@ -20,8 +21,17 @@ func TestFib(t *testing.T) {
 	if n != 1 {
 		panic(fmt.Errorf("N is %d", n))
 	}
+
 	_, err = Fib(-1)
 	if err == nil {
 		panic(fmt.Errorf("No err on neg"))
+	}
+
+	n, err = Fib(0)
+	if err != nil {
+		panic(err)
+	}
+	if n != 0 {
+		panic(fmt.Errorf("N is %d", n))
 	}
 }
