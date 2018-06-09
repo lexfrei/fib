@@ -16,13 +16,10 @@ func Fib(c int) (n int, err error) {
 
 	nm1 = 1
 	nm2 = 1
-	n = 1
 
 	for i := 0; i < c-2; i++ {
-		n = nm1 + nm2
-		nm2 = nm1
-		nm1 = n
+		nm2, nm1 = nm1, nm1+nm2
 	}
 
-	return n, nil
+	return nm1, nil
 }
