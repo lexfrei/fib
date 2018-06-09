@@ -19,5 +19,5 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	fmt.Printf("%d is %d", n, c)
+	fmt.Printf("%d is %d\n", n, c)
 }
