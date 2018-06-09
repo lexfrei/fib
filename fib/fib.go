@@ -12,10 +12,7 @@ func Fib(c int) (n int, err error) {
 		return 0, nil
 	}
 
-	var nm1, nm2 int
-
-	nm1 = 1
-	nm2 = 1
+	var nm1, nm2 int = 1, 1
 
 	for i := 0; i < c-2; i++ {
 		nm2, nm1 = nm1, nm1+nm2
